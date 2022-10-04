@@ -19,7 +19,15 @@ navrbarMenu.addEventListener('click', (event) => {
         return;
     }
 
-    console.log(event.target.dataset.link);
-    const scroll= document.querySelector(link);
-    scroll.scrollIntoView({behavior:'smooth'});
-}); 
+    scrollIntoView(link);
+});
+
+const contactme = document.querySelector('.home__contact');
+contactme.addEventListener('click', () => {
+   scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector){
+    const scroll = document.querySelector(selector);
+    scroll.scrollIntoView({behavior: 'smooth'});
+}
