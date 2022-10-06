@@ -40,3 +40,16 @@ function scrollIntoView(selector){
     const scroll = document.querySelector(selector);
     scroll.scrollIntoView({behavior: 'smooth'});
 }
+
+// up arrow btn
+const arrowbtn = document.querySelector('.arrowbtn');
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeheight/2){
+        arrowbtn.classList.add('visible');
+    }else{
+        arrowbtn.classList.remove('visible');
+    }
+});
+arrowbtn.addEventListener('click',()=>{
+    scrollIntoView('#home');
+})
