@@ -25,31 +25,54 @@ navrbarMenu.addEventListener('click', (event) => {
 // 컨택미를 클릭했을 때 컨택 항목으 스크롤링
 const contactme = document.querySelector('.home__contact');
 contactme.addEventListener('click', () => {
-   scrollIntoView('#contact');
+    scrollIntoView('#contact');
 });
 
 //스크롤링 했을때 홈이 투명도 변화
 const home = document.querySelector('.home__container');
 const homeheight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', ()=>{
+document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeheight;
 });
 
-//seting
-function scrollIntoView(selector){
-    const scroll = document.querySelector(selector);
-    scroll.scrollIntoView({behavior: 'smooth'});
-}
-
 // up arrow btn
 const arrowbtn = document.querySelector('.arrowbtn');
-document.addEventListener('scroll',()=>{
-    if(window.scrollY > homeheight/2){
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeheight / 2) {
         arrowbtn.classList.add('visible');
-    }else{
+    } else {
         arrowbtn.classList.remove('visible');
     }
 });
-arrowbtn.addEventListener('click',()=>{
+arrowbtn.addEventListener('click', () => {
     scrollIntoView('#home');
 })
+
+// projects
+const categoriesbtn = document.querySelector('.work__categories');
+const projectsbtn = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+categoriesbtn.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    console.log(filter);
+
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if(filter === '*' || filter === project.dataset.type){
+            project.classList.remove('invisible');
+        }else{
+            project.classList.add('invisible');
+        }
+    });
+});
+
+//seting
+function scrollIntoView(selector) {
+    const scroll = document.querySelector(selector);
+    scroll.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
