@@ -57,16 +57,17 @@ categoriesbtn.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     }
-    console.log(filter);
-
-    projects.forEach((project) => {
-        console.log(project.dataset.type);
+    projectsbtn.classList.add('animation-out');
+    setTimeout(()=>{
+        projects.forEach((project) => {
         if(filter === '*' || filter === project.dataset.type){
             project.classList.remove('invisible');
         }else{
             project.classList.add('invisible');
         }
     });
+        projectsbtn.classList.remove('animation-out');
+    },300);
 });
 
 //seting
