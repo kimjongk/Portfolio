@@ -18,8 +18,14 @@ navrbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-
+    navrbarMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+// 네바 메뉴가 화면이 작아졌을때 토글버튼 변형효과
+const navbartogglebtn = document.querySelector('.navbar__toggle-btn');
+navbartogglebtn.addEventListener('click',()=>{
+    navrbarMenu.classList.toggle('open')
 });
 
 // 컨택미를 클릭했을 때 컨택 항목으 스크롤링
