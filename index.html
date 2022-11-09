@@ -8,7 +8,7 @@
     <title>Jongk's Portfolio</title>
     <meta name="description" content="Portfolio for world-renowned software engineer Jongk">
     <meta name="authou" content="Jongk">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <link rel="icon" type="image/png" href="imgs/face-grin-squint-tears-regular.svg">
     <script src="https://kit.fontawesome.com/9a1fbb0624.js" crossorigin="anonymous">
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,7 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fab fa-diaspora"></i>
-            <a href="#">Jongk</a>
+            <a href="#" class="mainjongk">JONGK</a>
         </div>
         <ul class="navbar__menu">
             <li class="navbar__menu__item active" data-link="#home">Home</li>
@@ -43,54 +42,60 @@
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img src="imgs/profile.jpeg" alt="Jongk's profile" class="home__avatar">
-            <h1 class="home__title">안녕하세요? <br /> Jongk입니다<i>!</i></h1>
-            <h2 class="home__desription">자기발전을 즐기는 디자이너/프론트엔드 개발자</h2>
-            <button class="home__contact">Contact Me!</button>
+            <h1 class="home__title">
+                <span onMouseOver='this.innerHTML="디자이너"' onMouseOut='this.innerHTML="프론트엔드 개발자"'>프론트엔드
+                    개발자</span><br />김종민입니다.
+            </h1>
+            <h3 class="home__desription">현재에 안주하지 않고 자기개발을 즐기는 디자이너로 새로운 것을 습득한다는 것에 즐거움을 느낍니다.<br />
+                가장 성공한 사람은 꾸준한 노력의 결과로써 성공한 사람이다 라는 말이 있듯<br />
+                모든 일에 쉽사리 포기하지 않고 끝까지 해내기 위해 항상 노력하며 책임감을 갖고 임합니다.<br />
+                밝고 긍정적인 성격으로 주위 환경에 잘 녹아들어 어떠한 곳에서도 잘 적응해 나갑니다.<br />
+                <button class="home__contact">Contact Me!</button>
         </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section section__container">
-        <h1>About me</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis rem ad odio voluptates vel, modi quia iusto
-            culpa enim natus.</p>
-        <div class="about__majors">
-            <div class="majour">
-                <div class="majour__icon">
-                    <i class="fa-brands fa-html5"></i>
+        <div class="aboutborder">
+            <h1 class="aboutme">About me</h1>
+            <p class="aboutme">프론트엔드 뿐만 아니라 그래픽 툴을 이용하여 다양한 웹 관련 디자인 작업과 편집 디자인 작업까지 가능합니다.</p>
+            <div class="about__majors">
+                <div class="majour">
+                    <div class="majour__icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h2 class="majour__title">Front-end</h2>
+                    <div class="majour__description">HTML, CSS, JS</div>
                 </div>
-                <h2 class="majour__title">Front-end</h2>
-                <div class="majour__description">HTML, CSS, JS</div>
-            </div>
-            <div class="majour">
-                <div class="majour__icon">
-                    <i class="fa-solid fa-image"></i>
+                <div class="majour">
+                    <div class="majour__icon">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h2 class="majour__title">Web Graphic</h2>
+                    <div class="majour__description">Photoshop, Illustation,<br />after effect</div>
                 </div>
-                <h2 class="majour__title">Web Graphic</h2>
-                <div class="majour__description">Photoshop, Illustation,<br />after effect</div>
-            </div>
-            <div class="majour">
-                <div class="majour__icon">
-                    <i class="fa-solid fa-print"></i>
-                </div>
-                <h2 class="majour__title">Print design</h2>
-                <div class="majour__description">Box package, Poster design,<br /> Brochure design</div>
-            </div>
-        </div>
-        <div class="about__jobs">
-            <div class="job">
-                <img src="#" alt="comport_logo" class="job__logo">
-                <div class="job-description">
-                    <p class="job__name">comport</p>
-                    <p class="job__period">2018~2019</p>
+                <div class="majour">
+                    <div class="majour__icon">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h2 class="majour__title">Print design</h2>
+                    <div class="majour__description">Box package, Poster design,<br /> Brochure design</div>
                 </div>
             </div>
-            <div class="job">
-                <img src="#" alt="risingtech_logo" class="job__logo">
-                <div class="job-description">
-                    <p class="job__name">risingtech</p>
-                    <p class="job__period">2019~</p>
+            <div class="about__jobs">
+                <div class="job">
+                    <img src="/imgs/cplogo.png" alt="comport_logo" class="job__logo1">
+                    <div class="job-description">
+                        <p class="job__name">comport</p>
+                        <p class="job__period">2018~2019</p>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="/imgs/babionlogo.png" alt="risingtech_logo" class="job__logo2">
+                    <div class="job-description">
+                        <p class="job__name">risingtech</p>
+                        <p class="job__period">2019~</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,10 +104,8 @@
     <!-- Skill -->
     <section id="skill" class="section">
         <div class="section__container">
-            <h1>Skills</h1>
-            <h2>Skills & Attributes</h2>
-            <p>예를들어 나는 어느 능력이 뛰어나고 팀활동에 적응을 잘하며 개인활동에도 문제없다. 그리고 배우는것에 흥미가 많아서~, 등등 내 특징에 대해서 설명하기 이건 지금 칸을 채우기위해 아무말이 나
-                씌부리는것이니 그 앞에 내용만 잘 적어서 내 스킬을 어필할수 있는 글귀를 적어라</p>
+            <h1 class="skillcolor">Skills</h1>
+            <p class="skill-description skillcolor">기술능력 및 사용가능한 그래픽 툴</p>
             <div class="skillset">
                 <div class="skillset__left">
                     <h3 class="skillset__title">Skill</h3>
@@ -188,39 +191,49 @@
     <section id="work" class="section">
         <div class="section__container">
             <h1>My work</h1>
-            <h2>Projects</h2>
+            <p>그래픽 툴을 이용한 상세페이지, 패키지 디자인, 배너, UI 작업 등도 가능합니다.</p>
             <div class="work__categories">
-                <button class="category__btn selected" data-filter="*">All<span class="category__count">4</span></button>
+                <button class="category__btn selected" data-filter="*">All<span
+                        class="category__count">4</span></button>
                 <button class="category__btn" data-filter="page">상세페이지<span class="category__count">2</span></button>
-                <button class="category__btn" data-filter="package">패키지 디자인<span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="package">패키지 디자인<span
+                        class="category__count">1</span></button>
                 <button class="category__btn" data-filter="banner">배너 작업<span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="UI">UI 디자인<span class="category__count">1</span></button>
             </div>
             <div class="work__projects">
-                <a href="" class="project" data-type="page" target="_blank">
-                    <img src="imgs/projects/project1.png" alt="project1" class="project__img">
+                <div id="imgdiv" class="project" data-type="page">
+                    <img src="imgs/projects/732-DB_01.jpg" class="project__img">
                     <div class="project__description">
-                        <h3>Project Site_1</h3>
-                        <span>Clone cording with HTML and CSS</span>
+                        <h3>상세페이지_</h3>
+                        <p>Clone cording with HTML and CSS</p>
                     </div>
-                </a>
+                </div>
                 <a href="" class="project" data-type="page" target="_blank">
                     <img src="imgs/projects/project2.png" alt="project2" class="project__img">
                     <div class="project__description">
-                        <h3>Project Site_2</h3>
+                        <h3>상세페이지_</h3>
                         <span>Clone cording with HTML and CSS</span>
                     </div>
                 </a>
                 <a href="" class="project" data-type="package" target="_blank">
                     <img src="imgs/projects/project3.png" alt="project3" class="project__img">
                     <div class="project__description">
-                        <h3>Project Site_3</h3>
+                        <h3>패키지 디자인_</h3>
                         <span>Clone cording with HTML and CSS</span>
                     </div>
                 </a>
                 <a href="" class="project" data-type="banner" target="_blank">
                     <img src="imgs/projects/project4.png" alt="project4" class="project__img">
                     <div class="project__description">
-                        <h3>Project Site_4</h3>
+                        <h3>배너 디자인</h3>
+                        <span>Clone cording with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="" class="project" data-type="UI" target="_blank">
+                    <img src="imgs/projects/project4.png" alt="project4" class="project__img">
+                    <div class="project__description">
+                        <h3>UI_디자인</h3>
                         <span>Clone cording with HTML and CSS</span>
                     </div>
                 </a>
@@ -230,9 +243,8 @@
 
     <!-- testimonials -->
     <section id="testimonials" class="section">
-        <div class="section__container">
+        <div class="section__container testimonialcolor">
             <h1>Testimonials</h1>
-            <h2>See what they say about me</h2>
             <div class="testimonials">
                 <div class="testimonial">
                     <img src="imgs/mr-han.png" alt="people" class="testimonial__avatar">
@@ -277,5 +289,13 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 </body>
-
+    <!-- modal page -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div id="iframe-container">
+            <iframe src="https://ai.esmplus.com/risingtech/Babion/SBC-732/sbc-732.html"
+            frameborder="0" class="modal-content" id="img01"></iframe>
+        </div>
+        <div id="caption"></div>
+    </div>
 </html>

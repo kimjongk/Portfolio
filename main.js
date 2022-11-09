@@ -24,7 +24,7 @@ navrbarMenu.addEventListener('click', (event) => {
 
 // 네바 메뉴가 화면이 작아졌을때 토글버튼 변형효과
 const navbartogglebtn = document.querySelector('.navbar__toggle-btn');
-navbartogglebtn.addEventListener('click',()=>{
+navbartogglebtn.addEventListener('click', () => {
     navrbarMenu.classList.toggle('open')
 });
 
@@ -64,23 +64,46 @@ categoriesbtn.addEventListener('click', (e) => {
         return;
     }
     projectsbtn.classList.add('animation-out');
-    setTimeout(()=>{
+    setTimeout(() => {
         projects.forEach((project) => {
-        if(filter === '*' || filter === project.dataset.type){
-            project.classList.remove('invisible');
-        }else{
-            project.classList.add('invisible');
-        }
-    });
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
         projectsbtn.classList.remove('animation-out');
-    },300);
+    }, 300);
+
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
 });
 
 //project click motion active
 const active = document.querySelector('.category__btn.selected');
 active.classList.remove('selected');
-const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-target.classList.add('selected');
+// const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+// target.classList.add('selected');
+
+//projects connecting imgaes
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+const img = document.getElementById("imgdiv");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+img.addEventListener('click', () => {
+    modal.style.display = "block";
+})
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
 
 //seting
 function scrollIntoView(selector) {
